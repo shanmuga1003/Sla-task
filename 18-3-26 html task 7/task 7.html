@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task 7</title>
+  <style>
+    #first{
+      background-color: cadetblue;
+    }
+    #second{
+      background-color: rgb(238, 179, 28);
+    }
+    #third{
+      background-color: lightcoral;
+    }
+
+    #third table{
+      border-collapse: collapse;
+      width: 30%;
+      margin: 50px;
+      
+      
+      text-align: center;
+      border : 2px solid black
+
+    }
+    
+    h1{
+      font-size: 40px;
+    }
+    h3{
+      font-size: 25px;
+    }
+    ul,ol{
+      font-size: 20px;
+    }
+    
+    #fifth table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    th,
+    td {
+      border: 2px solid black;
+      padding: 8px;
+    }
+
+    #fifth th {
+      background-color: #aea3a3;
+    }
+
+    .break {
+      background-color: #fcdebe;
+      font-weight: bold;
+    }
+
+    .English{
+      background-color: aquamarine;
+    }
+    .Maths{
+      background-color:rgb(237, 129, 237);
+    }
+    .Science{
+      background-color:rgb(246, 246, 125);
+    }
+    .Social{
+      background-color:rgb(241, 135, 135);
+    }
+    .Tamil{
+       background-color: rgb(239, 166, 76);
+    }
+    .Computer{
+      background-color:rgb(143, 246, 246) ;
+    }
+    .PET{
+      background-color: rgb(124, 201, 249);
+    }
+    .GK{
+      background-color:rgb(249, 2, 147) ;
+    }
+    .Library{
+      background-color: rgb(146, 246, 47);
+    }
+    h2{
+      text-align: center;
+    }
+    .day{
+      background-color: rgb(47, 252, 71);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="first">
+    <h1>1st Question</h1>
+    <h3>Shopping List(Unorder List)</h3>
+    <ul>
+      <li>Milk</li>
+      <li>Bread</li>
+      <li>Eggs</li>
+      <li>Fruits</li>
+    </ul>
+    <h3>Steps to Make Tea(Order List)</h3>
+    <ol>
+      <li>Boil water</li>
+      <li>Add tea powder</li>
+      <li>Add milk</li>
+      <li>Add sugar</li>
+      <br><br>
+  </div>
+
+  <div id="second">
+    <h1>2nd Question</h1>
+    <h3>Daily Routine</h3>
+    <ol>
+      <li>Morning
+        <ul>
+          <li>Wake up</li>
+          <li>Brush teeth</li>
+          <li>Exercise</li>
+        </ul>
+      </li>
+      <li>Afternoon
+        <ul>
+          <li>Have lunch</li>
+          <li>Study</li>
+        </ul>
+      </li>
+      <li>Evening
+        <ul>
+          <li>Play games</li>
+          <li>Dinner</li>
+        </ul>
+      </li>
+    </ol>
+    <br><br>
+  </div>
+  <div id="third">
+    <h1>3th Question</h1>
+    <h3>Student Table</h3>
+    <table >
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+      </tr>
+      <tr>
+        <td>Shanmuga Priyan </td>
+        <td>23</td>
+        <td>MCA</td>
+      </tr>
+      <tr>
+        <td>Venkat</td>
+        <td>22</td>
+        <td>MCA</td>
+      </tr>
+      <tr>
+        <td>Sadham</td>
+        <td>23</td>
+        <td>MCA</td>
+      </tr>
+    </table>
+    <br><br>
+
+  </div>
+  <div id="fifth">
+    <h1 style="text-align: center;">5th Question</h1>
+
+    <h2>School Time Table</h2>
+
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>P1</th>
+        <th>P2</th>
+        <th>Break</th>
+        <th>P3</th>
+        <th>P4</th>
+        <th>P5</th>
+        <th>Lunch</th>
+        <th>P6</th>
+        <th>P7</th>
+        <th>P8</th>
+      </tr>
+
+      <tr>
+        <td class="day">Monday</td>
+        <td class="English">English</td>
+        <td class="Maths">Maths</td>
+        <td rowspan="5" class="break">Snack</td>
+        <td class="Science">Science</td>
+        <td class="Social">Social</td>
+        <td class="Tamil">Tamil</td>
+        <td rowspan="5" class="break">Lunch</td>
+        <td class="Computer">Computer</td>
+        <td class="PET">P.E.T</td>
+        <td class="GK">Gk</td>
+      </tr>
+
+      <tr>
+        <td class="day">Tuesday</td>
+        <td class="Tamil">Tamil</td>
+        <td class="Social">Social</td>
+        <td colspan="2" class="Computer">Computer Lab</td>
+        <td class="Maths">Maths</td>
+        <td class="English">English</td>
+        <td class="Science">Science</td>
+        <td class="Maths">Maths</td>
+      </tr>
+
+      <tr>
+        <td class="day">Wednesday</td>
+        <td class="Science">Science</td>
+        <td class="Maths">Math</td>
+        <td class="English">English</td>
+        <td class="Science">Science</td>
+        <td class="Tamil">Tamil</td>
+        <td colspan="2" class="Library">Library</td>
+        <td class="Social">Social</td>
+      </tr>
+
+      <tr>
+        <td class="day">Thursday</td>
+        <td class="Social">Social</td>
+        <td class="English">English</td>
+        <td class="Computer">Computer</td>
+        <td colspan="2" class="Maths">Maths</td>
+        <td class="Science">Science</td>
+        <td class="Social">Social</td>
+        <td class="Tamil">Tamil</td>
+      </tr>
+
+      <tr>
+        <td class="day">Friday</td>
+        <td class="Tamil">Tamil</td>
+        <td class="Social">Social</td>
+        <td class="Maths">Math</td>
+        <td class="Science">Science</td>
+        <td class="English">English</td>
+        <td class="GK">GK</td>
+        <td colspan="2" class="PET">P.E.T</td>
+      </tr>
+
+    </table>
+
+
+  </div>
+
+</body>
+
+</html>
