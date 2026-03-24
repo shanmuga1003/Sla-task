@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task 11</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{
+      margin: 0;
+      background-color: rgb(26, 25, 25);
+      text-align: center;
+    }
+    #heading{
+      font-size: 50px;
+      color: aliceblue;
+    }
+    #container{
+      width: 100%;
+      display: flex;
+      gap:50px;
+      justify-content: center;
+      align-items: center;
+      
+
+      padding: 70px;
+      box-sizing: border-box;
+    }
+
+    #internal{
+      height: 70vh;
+      width: 40vh;
+      background: linear-gradient(80deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 40px;
+    }
+    p{
+      font-size:x-large;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="heading">
+    Types of CSS
+  </h1>
+  <div id="container">
+  <div id="inline" style="height: 70vh; width: 40vh; background:linear-gradient(90deg, #f05053  0%, #e1eec3 100%); display: flex; flex-direction: column; justify-content: center; padding: 15px; box-sizing: border-box; border-radius: 40px;">
+    <h1>Inline CSS</h1>
+    <p>This method involves applying styles directly to individual HTML elements using the style attribute within the HTML tag.</p>
+  </div>
+
+  <div id="internal">
+    <h1>Internal CSS</h1>
+    
+    <p> Also known as embedded CSS, this type is defined within a style tag located in the head section of a single HTML document.</p>
+  </div>
+
+  <div id="external">
+    <h1>External CSS</h1>
+    <p>
+      This is the most common and recommended method for web development. Styles are written in a separate file with a .css extension and linked to HTML documents using the link tag in the head section.
+    </p>
+  </div>
+  </div>
+</body>
+</html>
