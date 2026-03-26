@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durai Singam</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+    }
+
+    h1 {
+      font-size: 3vw;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.551);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #363535;
+    }
+
+    img {
+      width: 400px;
+      max-width: 400px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    @media (max-width: 768px) {
+      body {
+        background: linear-gradient(to right, #056b3b, #516b8b);
+      }
+
+      h1 {
+        font-size: 8vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Searching For Danny</h1>
+
+  <div class="container">
+    <img src="assets/singam.jpg" alt="Profile Image">
+    <p>Hello! This is me Durai Singam, Assistant commissioner of police.</p>
+    <p> I am currently on an undercover operation.</p>
+    <p>If you find Danny anywhere, please contact me using the box below.</p>
+    <form onsubmit="getInformation()">
+      <textarea id="information" rows="5" cols="50" placeholder="fill here" required></textarea><br>
+      <button type="submit">Contact Me</button>
+    </form>
+  </div>
+  <script>
+    function getInformation() {
+      alert('Thank you for the information you given.')
+    }
+  </script>
+</body>
+
+</html>
