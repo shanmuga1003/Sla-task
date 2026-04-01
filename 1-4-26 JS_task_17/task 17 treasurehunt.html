@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      background: url(assests/black-pearl-sailing-ship-de3hbheholkyutuv.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    ol{
+      display: flex;
+      gap: 60px;
+      font-size: 25px;
+    }
+    #boat{
+      border-radius: 50px;
+      padding: 50px;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 0.632);
+    font-family:'Poppins', sans-serif;
+    
+    color: black;
+  }
+  button{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 40px;
+  }
+  button:hover{
+    background-color: brown;
+    color: aliceblue;
+  }
+  </style>
+</head>
+<body>
+  <div id="boat">
+    <h1>Welcome to the Black Pearl ship</h1>
+    <img src="assests/o60etl3jm2am9vus3ofdvdq4k4-b5aea52cb46d97d0569152eab08d6897.png" height="300px">
+    <h2>Crew Members</h2>
+    <ol id="crew">
+      <li>jack sparrow</li>
+      <li>alice</li>
+      <li>bob</li>
+      <li>richard</li>
+    </ol>
+    <div>
+    <button onclick="askRoute('Jack')">jack</button>
+    <button onclick="askRoute('Alice')">alice</button>
+    </div>
+    <h3 id="result"></h3>
+    <script>
+      function askRoute(name){
+        if(name === "Jack"){
+        document.getElementById('result').innerText=name + ' directing to North';
+        }else{
+          document.getElementById('result').innerText=name + ' directing to South';
+        }
+        
+      }
+    </script>
+
+  </div>
+</body>
+</html>
