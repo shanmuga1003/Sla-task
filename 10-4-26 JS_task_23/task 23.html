@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 90vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      
+      width: 350px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      transition: 0.3s;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      transition: transform,background;
+      transition-duration: 0.5s;
+    }
+
+    button:hover {
+      background: #a04589;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 id="title">Welcome</h1>
+    <p id="para">Click the buttons to see magic</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="changeColor()">Change Color & Size</button>
+  
+
+  <script>
+    function changeText() {
+      document.getElementById("title").innerText = "Hello Shanmuga";
+    }
+
+    function changeStyle() {
+      let el = document.getElementById("para");
+      el.style.backgroundColor = "#ffeaa7";
+      el.style.padding = "10px";
+      el.style.borderRadius = "10px";
+    }
+
+    function changeContent() {
+      document.getElementById("para").innerHTML = "Content Updated Successfully!";
+    }
+
+    function changeColor() {
+      let p = document.getElementById("para");
+      p.style.color = "red";
+      p.style.fontSize = "24px";
+    }
+  </script>
+
+</body>
+</html>
