@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Handling Demo</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      text-align: center;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      background: white;
+      width: 350px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #e84118;
+    }
+
+    #output {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Event Handling</h2>
+
+    <input type="text" id="nameInput" placeholder="Type something..." oninput="textEnter()">
+
+    <p id="liveText">Typing will appear here...</p>
+
+    <button id="btn">Click Me</button>
+    <button id="btn1">Change bg Color</button>
+
+    <p id="output"></p>
+  </div>
+
+  <script>
+    
+    
+    let btn = document.getElementById("btn");
+    let btn1 = document.getElementById("btn1");
+
+    btn.onclick = function() {
+      let input = document.getElementById("nameInput").value;
+      let output = document.getElementById("output");
+      output.innerText = "You entered: " + input;
+    };
+
+    function textEnter(){
+      let input = document.getElementById("nameInput").value;
+      document.getElementById("liveText").textContent = input;
+    }
+
+    btn1.addEventListener("click", function() {
+      document.body.style.background = "linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%)";
+    });
+  </script>
+
+</body>
+</html>
