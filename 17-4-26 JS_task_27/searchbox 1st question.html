@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ul1">
+    
+  </ul>
+
+  <input type="text">
+  
+
+  <script>
+    let list = ["IFB","Whirlpool","Samsung"];
+    let input = document.querySelector("input");
+    let ul1=document.getElementById("ul1");
+    list.forEach((element) => {
+      let li = document.createElement("li");
+      ul1.appendChild(li).textContent = element;
+    });
+
+    input.addEventListener("input", function(){
+      let inp = input.value;
+      
+      ul1.innerHTML = "";
+      for(let i= 0; i<list.length;i++){
+        if(inp.toLowerCase() === list[i].toLowerCase()){
+          let li = document.createElement("li");
+      ul1.appendChild(li).textContent = list[i];
+        }
+      }
+      
+    })
+  </script>
+</body>
+</html>

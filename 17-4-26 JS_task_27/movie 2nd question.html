@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anils theatre</title>
+<style>
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      
+      border-radius: 20px;
+      background-color: rgb(204, 198, 20);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform;
+      transition-duration: 0.8s; 
+       /* transition-delay: 0.3s; */
+    }
+    li:hover{
+      transform: scale(1.1) translateY(-10px);
+      box-shadow: 0 0 20px rgb(198, 196, 196);
+    }
+    div {
+      margin: 0;
+      padding: 50px;
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.092);
+      box-shadow: 0 0 100px rgb(198, 196, 196);
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1{
+      font-size: 50px;
+      color:azure;
+    }
+    img{
+      height:250px;
+      width: 170px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="">
+    
+  <h1><img src="assests/pngaaa.com-175448.png"  style="height:60px; width:60px"> Anils Theatre</h1>
+  <ul id="movielist"></ul>
+
+  </div>
+  <script>
+    let ul = document.getElementById("movielist");
+    ul.style.listStyleType = "none";
+    ul.style.display = "flex";
+    ul.style.gap = "50px";
+    ul.style.textAlign = "center";
+    ul.style.fontSize = "20px";
+    let moviedetails = ["Jana Nayagan","GOAT","Leo","Varisu","Beast","Master","Bigil","Sarkar","Mersal","	Bairavaa","Theri","Puli","Kaththi","Jilla","Thalaivaa"];
+    let images = [];
+    
+    
+ 
+    for(let i=0; i<moviedetails.length;i++){
+      let li = document.createElement("li");
+      
+      let p = document.createElement("p");
+      let img = document.createElement("img");
+      img.src = `assests/movie${i}.jpeg`;
+      li.appendChild(img);
+      
+      li.appendChild(p).textContent = moviedetails[i];
+      ul.appendChild(li);
+    }
+    
+  </script>
+</body>
+
+</html>
