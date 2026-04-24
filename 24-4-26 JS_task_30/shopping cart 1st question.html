@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopMe Store</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ul {
+        display: flex;
+
+        flex-wrap: wrap;
+      }
+      li {
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform;
+        transition-duration: 0.8s;
+        /* transition-delay: 0.3s; */
+      }
+      .product-card {
+        border-radius: 30px;
+        transition: transform;
+        transition-duration: 0.8s;
+      }
+      .product-card:hover {
+        transform: scale(1.1) translateY(-10px);
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+      }
+      #aaa {
+        margin: 0;
+        padding: 50px;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 100px rgb(255, 255, 255);
+      }
+      #bbb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 50px;
+        color: rgb(6, 6, 6);
+      }
+      h2 {
+        font-size: 30px;
+      }
+      img {
+        height: 240px;
+        width: 190px;
+
+        margin: 10px;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        background-color: rgb(224, 200, 44);
+        border-style: none;
+        border-radius: 30px;
+        margin-top: 20px;
+        transition: transform, background-color;
+        transition-duration: 0.8s;
+        font-size: 20px;
+      }
+      button:hover {
+        background-color: rgb(74, 248, 0);
+        transform: scale(1.1) translateY(-10px);
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="aaa">
+      <div id="bbb">
+        <h1>ShopMe Store</h1>
+        <h2>Cart(<span id="cart-count">0</span>)</h2>
+      </div>
+
+      <ul id="itemlist"></ul>
+    </div>
+    <script>
+      let ul = document.getElementById("itemlist");
+      ul.style.listStyleType = "none";
+      ul.style.display = "flex";
+      ul.style.gap = "70px";
+      ul.style.textAlign = "center";
+      ul.style.fontSize = "20px";
+      let moviedetails = [
+        "Blazers",
+        "Korean Style shirt(w)",
+        "Black and gray hoodie",
+        "Full Sleeve Tshirt",
+        "Shirt & Pants Set",
+        "Men's blue jeans",
+        "Olive green shirt",
+        "Midi Party Dress",
+      ];
+
+      for (let i = 0; i < moviedetails.length; i++) {
+        let li = document.createElement("li");
+        let div = document.createElement("div");
+        let p = document.createElement("p");
+        let img = document.createElement("img");
+        let button = document.createElement("button");
+        div.setAttribute("class", "product-card");
+        button.setAttribute("class", "btn");
+        button.addEventListener("click", addcart);
+        img.src = `assests/image${i}.jpeg`;
+        div.appendChild(img);
+
+        div.appendChild(p).textContent = moviedetails[i];
+        li.appendChild(div);
+        li.appendChild(button).textContent = "add cart";
+        ul.appendChild(li);
+      }
+
+      let cartcount = Number(document.getElementById("cart-count").innerHTML);
+      function addcart() {
+        cartcount++;
+        document.getElementById("cart-count").textContent = cartcount;
+      }
+    </script>
+  </body>
+</html>
